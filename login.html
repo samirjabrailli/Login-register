@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+   <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card active" id="login-form">
+            <h2>Giriş Et</h2>
+            <form>
+                <div class="input-group">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="input-group password-group">
+                    <input type="password" id="login-password" placeholder="Şifrə (max 16 simvol)" maxlength="16" pattern="[a-zA-Z0-9]{1,16}" title="Şifrə a-z, 0-9 simvollarından ibarət olmalı və maksimum 16 simvol olmalıdır." required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="submit">Giriş Et</button>
+            </form>
+            <p>Qeydiyyatınız yoxdur? <a href="index.html">Qeydiyyatdan Keç</a></p>
+            <p><a href="#" id="forgot-password">Şifrəni Unutdum?</a></p>
+        </div>
+
+        <div class="form-card hidden" id="forgot-password-form">
+            <h2>Şifrəni Bərpa Et</h2>
+            <form>
+                <p>Şifrəni bərpa etmək üçün email adresinizi daxil edin.</p>
+                <div class="input-group">
+                    <input type="email" id="recover-email" placeholder="Email" required>
+                </div>
+                <button type="submit">Bərpa Et</button>
+            </form>
+            <p><a href="#" id="back-to-login">Geri Qayıt</a></p>
+        </div>
+    </div>
+
+   <script src="./script.js"></script>
+</body>
+</html>

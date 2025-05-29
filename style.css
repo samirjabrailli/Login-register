@@ -4,6 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     display: flex;
+    flex-direction: column; /* Değişiklik: Footer'ı alta almak için */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -20,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1; /* Konteynerin dikeyde büyümesini sağlar */
 }
 
 .form-card {
@@ -126,6 +128,22 @@ p a:hover {
     text-decoration: underline;
 }
 
+/* Footer Styles */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.1); /* Hafif şeffaf arkaplan */
+    color: white;
+    font-size: 14px;
+    margin-top: auto; /* Footer'ı en alta iter */
+}
+
+.footer p {
+    margin: 0;
+    color: white;
+}
+
 /* Responsivlik */
 @media (max-width: 480px) {
     .form-card {
@@ -146,5 +164,10 @@ p a:hover {
     button {
         font-size: 16px;
         padding: 10px;
+    }
+
+    .footer {
+        padding: 15px 0;
+        font-size: 12px;
     }
 }
